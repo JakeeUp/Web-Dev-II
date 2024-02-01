@@ -1,0 +1,197 @@
+<!DOCTYPE html>  
+<html lang="en">
+<head>
+	<meta charset="utf-8"> 
+	<meta name="descrition" content="CIS 3365.01 Sandbox">
+	<meta name="keywords" content="UIW, CIS 3365.01"> <!-- do caps matter?, what order is best for relevance on words?, is there a recommended amount of words? -->
+	<title>CIS 3365.01 Sandbox | Home</title>
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/colors.css">
+</head>
+
+<body>
+	<div id="container">
+		<header>
+			<img src="images/sandBox.png" height="45" alt="Sand Box logo" title="Sand Box logo"> <!-- header is 98px height, so image will be 90px with 4pxmargin tob & bottom, -->
+			<h1>CIS 3365.01 Sandbox</h1>
+			<nav>
+				<ul>
+					<li><a href="index.html" title="home">Home</a></li>
+					<li><a href="hw1.html" title="Homework 1">hw 1</a></li>
+					<li><a href="hw2.html" title="Homework 2">hw 2</a></li>
+					<li><a href="hw3.html" title="Homework 3">hw 3</a></li>
+					<li><a href="hw4.html" title="Homework 4">hw 4</a></li>
+					<li><a href="hw5.html" title="Homework 5">hw 5</a></li>
+					<li><a href="hw6.html" title="Homework 6">hw 6</a></li>
+					<li><a href="hw7.html" title="Homework 7">hw 7</a></li>
+					<li><a href="hw8.html" title="Homework 8">hw 8</a></li>
+					<li><a href="hw9JSON.html" title="Homework 9 JSON">Homework 9 JSON</a></li> 
+				</ul>
+			</nav>
+		</header>
+		
+		
+		<div id="content">
+				<h3> This is my homework #7 </h3>
+				<h2> Checked combinations of the actors now work! </h2>
+					
+					
+					<!-- form copied and edited from test5a example-->
+				<form name="movieForm" action="" style="text-align:left;" method="post" onReset="clearHTML1()" > 
+				<!-- The action attribute specifies where to send the form-data when a form is submitted. In HTML5, the action attribute is no longer required.-->
+					<fieldset> <!--The <fieldset> tag is used to group related elements in a form. The <fieldset> tag draws a box around the related elements.-->
+						<legend>Personal Info</legend>
+							Avatar name:<input type="text" name="Aname" id="Aname" placeholder="Avatar Name" ><br>  <!-- <fieldset name="text"> Specifies the name of the fieldset -->
+							<br>						
+							Favorite type of movie:<select name="Mtype" id="Mtype">
+								<option value="Horror">Horror</option>
+								<option value="Action">Action</option>
+								<option value="Comedy">Comedy</option>
+								<option value="Parody">Parody</option>
+								<option value="Drama">Drama</option>
+								<option value="Remake">Remake</option>
+								<option value="Sci-Fi">Sci-Fi</option>
+								<option value="Romantic">Romantic</option>
+								<option value="other">Other</option>
+								</select><br>
+							<br>
+							Your Age: <br>
+							<input type="radio" name="age" id="age" onclick="checkAge('1')" >13 & under<br>
+							<input type="radio" name="age" id="age" onclick="checkAge('2')">14 - 16<br>
+							<input type="radio" name="age" id="age" onclick="checkAge('3')" >17 & over<br>
+							<br>
+							What actor do you like:<br>
+							<input type="checkbox" name="actor" id="JD" value="1">Johnny Depp<br>
+							<input type="checkbox" name="actor" id="LN" value="2">Liam Neeson<br>
+							<input type="checkbox" name="actor" id="SJ" value="3">Samuel L. Jackson<br>
+							<input type="checkbox" name="actor" id="none" value="4">none<br>
+							<input type="button" name="CheckAll" value="Check All" onClick="checkAll(document.movieForm.actor)">
+							<input type="button" name="UnCheckAll" value="Uncheck All" onClick="uncheckAll(document.movieForm.actor)">
+							<br>
+
+							Would you like to say anything about these actors?<br>
+							<textarea rows="5" cols="60" name="comment" id="comment" placeholder="Enter your comment here"></textarea><br>
+							
+							<button type="reset" value="reset" onclick="clearHTML1()">Reset</button>
+							<button type="button" onclick="results()">submit</button>
+					</fieldset>							
+				</form>
+						
+				
+					<p id="MovieMsg" style="color:red; font-size:1.6em; font-weight:bold;"><img src="images/movie_logo.gif" height="100" alt="Movie logo" title="Movie logo"></p>
+					
+					<script type="text/javascript">
+						<!-- 
+						function checkAll(allActors){
+							for (i = 0; i < allActors.length-1; i++) //this will check all actors except the last one in list.
+								allActors[i].checked = true;
+							}
+
+						function uncheckAll(allActors){
+							for (i = 0; i < allActors.length; i++)
+								allActors[i].checked = false ;
+							}
+							// -->
+					</script>
+											
+					<script type="text/javascript"> <!-- This function checks the age and sets the new value to age. -->
+						<!--
+						function checkAge(test) {
+								
+								switch(test){ 
+									case '1': document.getElementById("age").value="under 13" ; <!-- gets your age and sets that value to c -->
+									break;
+									case '2': document.getElementById("age").value="14 - 16";
+									break;
+									case '3': document.getElementById("age").value="over 17";
+									break;
+								}						
+						}
+						
+						
+						
+						function results(){
+							var a = document.getElementById("Aname").value; // gets avatar name and sets the value to a -->
+							var b = document.getElementById("Mtype").value; // gets the movie type and sets that value to b -->
+							var c = document.getElementById("age").value; //gets your age and sets that value to c -->
+							//gets the actor's name and sets that value to d -->
+							var e = document.getElementById("comment").value; 
+								
+								
+						 if (document.movieForm.JD.checked == true && document.movieForm.LN.checked == false && document.movieForm.SJ.checked == false && document.movieForm.none.checked == false){ 
+							 var d='Good choice of actor: Johnny Depp <img style="float:right; position:absolute; left:700px; top:225px;" src="images/JDepp.jpg" width="100">'; 
+							 } 
+						else if (document.movieForm.JD.checked == false && document.movieForm.LN.checked == true && document.movieForm.SJ.checked == false && document.movieForm.none.checked == false) { 
+							 var d='Good choice of actor: Liam Neeson <img style="float:right; position:absolute; left:800px; top:225px;" src="images/LNeeson.jpg" width="100">'; 
+							 } 
+						else if (document.movieForm.JD.checked == false && document.movieForm.LN.checked == false && document.movieForm.SJ.checked == true && document.movieForm.none.checked == false) { 
+							 var d='Good choice of actor: Samuel L. Jackson <img style="float:right; position:absolute; left:900px; top:225px;" src="images/SJackson.jpg" width="100">'; 
+							 } 
+						else if (document.movieForm.JD.checked == false && document.movieForm.LN.checked == false && document.movieForm.SJ.checked == false && document.movieForm.none.checked == true) { 
+							 var d='You like none of these actors.'; 
+							 } 
+						 else if (document.movieForm.JD.checked == false && document.movieForm.LN.checked == false && document.movieForm.SJ.checked == false && document.movieForm.none.checked == false) { 
+							 var d='You forgot to check what actor you liked.'; 
+							 } 
+						else if (document.movieForm.JD.checked == false && document.movieForm.LN.checked == false && document.movieForm.SJ.checked == true && document.movieForm.none.checked == true) { 
+							 var d='<i>It seems you liked Samuel L. Jackson <b>but</b> also checked none. That\'s weird.</i>'; 
+							 }
+						 else if (document.movieForm.JD.checked == false && document.movieForm.LN.checked == true && document.movieForm.SJ.checked == false && document.movieForm.none.checked == true) { 
+							 var d='<i>It seems you liked Liam Neeson <b>but</b> also checked none. That\'s weird.</i>'; 
+							 }
+						 else if (document.movieForm.JD.checked == true && document.movieForm.LN.checked == false && document.movieForm.SJ.checked == false && document.movieForm.none.checked == true) { 
+							 var d='<i>It seems you liked Johnny Depp <b>but</b> also checked none. That\'s weird.</i>'; 
+							 }
+						 else if (document.movieForm.JD.checked == true && document.movieForm.LN.checked == true && document.movieForm.SJ.checked == true && document.movieForm.none.checked == true) { 
+							 var d='<i>It seems you liked them all <b>but</b> also checked none. That\'s weird.</i>'; 
+							 }
+						else if (document.movieForm.JD.checked == true && document.movieForm.LN.checked == true && document.movieForm.SJ.checked == false && document.movieForm.none.checked == false) { 
+							 var d='Johnny Depp & Liam Neeson are both great actors! <img style="float:right; position:absolute; left:700px; top:225px;" src="images/JDepp.jpg" width="100"> <img style="float:right; position:absolute; left:800px; top:225px;" src="images/LNeeson.jpg" width="100">'; 
+							 }
+						else if (document.movieForm.JD.checked == true && document.movieForm.LN.checked == false && document.movieForm.SJ.checked == true && document.movieForm.none.checked == false) { 
+							 var d='Johnny Depp & Samuel L. Jackson are both great actors! <img style="float:right; position:absolute; left:700px; top:225px;" src="images/JDepp.jpg" width="100"> <img style="float:right; position:absolute; left:900px; top:225px;" src="images/SJackson.jpg" width="100">'; 
+							 }
+						else if (document.movieForm.JD.checked == false && document.movieForm.LN.checked == true && document.movieForm.SJ.checked == true && document.movieForm.none.checked == false) { 
+							 var d='Liam Neeson and Samuel L. Jackson are both great actors! <img style="float:right; position:absolute; left:800px; top:225px;" src="images/LNeeson.jpg" width="100"> <img style="float:right; position:absolute; left:900px; top:225px;" src="images/SJackson.jpg" width="100">'; 
+							 }
+						else if (document.movieForm.JD.checked == true && document.movieForm.LN.checked == true && document.movieForm.SJ.checked == true && document.movieForm.none.checked == false) { 
+							 var d='Johnny Depp, Liam Neeson and Samuel L. Jackson are all great actors! <img style="float:right; position:absolute; left:700px; top:225px;" src="images/JDepp.jpg" width="100"> <img style="float:right; position:absolute; left:800px; top:225px;" src="images/LNeeson.jpg" width="100"> <img style="float:right; position:absolute; left:900px;top:225px;" src="images/SJackson.jpg" width="100">'; 
+							 }
+							 
+							document.getElementById("MovieMsg").innerHTML=('Hello ' + a + '! <br>' + b + ' is a great type of movie.<br> You are ' + c +' years old.<br>' + d + '<br>Here are your comments: '+ e + '<br>');
+							}
+						
+						
+						function clearHTML1(){
+								document.getElementById("MovieMsg").innerHTML = ('<p> </p>');
+							}
+							
+						//-->
+					</script>
+				<hr>			
+				
+														
+		</div> <!-- close div="content" -->	
+		
+		<footer>
+			<nav>
+				<ul>
+					<li><a href="index.html" title="home">Home</a></li>
+					<li><a href="hw1.html" title="Homework 1">hw 1</a></li>
+					<li><a href="hw2.html" title="Homework 2">hw 2</a></li>
+					<li><a href="hw3.html" title="Homework 3">hw 3</a></li>
+					<li><a href="hw4.html" title="Homework 4">hw 4</a></li>
+					<li><a href="hw5.html" title="Homework 5">hw 5</a></li>
+					<li><a href="hw6.html" title="Homework 6">hw 6</a></li>
+					<li><a href="hw7.html" title="Homework 7">hw 7</a></li>
+					<li><a href="hw8.html" title="Homework 8">hw 8</a></li>
+					<li><a href="hw9JSON.html" title="Homework 9 JSON">Homework 9 JSON</a></li> 
+				</ul>
+			</nav>
+			Copyright Spring 2023 Prof Idar
+		</footer>
+		
+	<div> <!-- close div="container" -->
+	
+</body>
+</html>

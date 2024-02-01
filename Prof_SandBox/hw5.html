@@ -1,0 +1,226 @@
+<!DOCTYPE html>  
+<html lang="en">
+<head>
+	<meta charset="utf-8"> 
+	<meta name="descrition" content="CIS 3365.01 Sandbox">
+	<meta name="keywords" content="UIW, CIS 3365.01"> <!-- do caps matter?, what order is best for relevance on words?, is there a recommended amount of words? -->
+	<title>CIS 3365.01 Sandbox | Home</title>
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/colors.css">
+</head>
+
+<body>
+	<div id="container">
+		<header>
+			<img src="images/sandBox.png" height="45" alt="Sand Box logo" title="Sand Box logo"> <!-- header is 98px height, so image will be 90px with 4pxmargin tob & bottom, -->
+			<h1>CIS 3365.01 Sandbox</h1>
+			<nav>
+				<ul>
+					<li><a href="index.html" title="home">Home</a></li>
+					<li><a href="hw1.html" title="Homework 1">hw 1</a></li>
+					<li><a href="hw2.html" title="Homework 2">hw 2</a></li>
+					<li><a href="hw3.html" title="Homework 3">hw 3</a></li>
+					<li><a href="hw4.html" title="Homework 4">hw 4</a></li>
+					<li><a href="hw5.html" title="Homework 5">hw 5</a></li>
+					<li><a href="hw6.html" title="Homework 6">hw 6</a></li>
+					<li><a href="hw7.html" title="Homework 7">hw 7</a></li>
+					<li><a href="hw8.html" title="Homework 8">hw 8</a></li>
+					<li><a href="hw9JSON.html" title="Homework 9 JSON">Homework 9 JSON</a></li> 
+				</ul>
+			</nav>
+		</header>
+		
+		
+		<div id="content">
+				<h3> This is my home page for CIS 3365.01 </h3>
+				<hr>
+				<p style="text-align:left; font-weight:bold;">
+					Homework:<br>
+					1. Create a JS that requires several strings be combined using concatentation.<br>
+					2. Create a JS that requires the use of escape characters in formatting the output.<br>
+					3. Create a form, different from the example in this lesson, which uses all of the input fields.<br>
+					4. Publish your work in an HTML document.
+				</p>
+				<hr>
+				
+				<h3>#1</h3>
+				
+					<script type="text/javascript">
+						<!--
+							var firstname='Henry';
+							var lastname='Idar';
+							var voicemail=0;
+							var missedCalls=2;
+							var text='and no text messages today.'
+							document.write('<p>' + firstname + ' ' + lastname + ', You have <b>' + voicemail + '</b> voicemail messages and <b>' + missedCalls + '</b> missed calls ' + text + '</p>');
+						//-->
+					</script>
+				<hr>
+				
+				<h3>#2</h3>  <!-- concatenation and escape characters -->
+					<script type="text/javascript">
+						<!--
+							document.write('<p> \"Hello World!\" My dog\'s toys are lost and I haven\'t found them yet. <br> Maybe I\'ll find them tomorrow.');
+						//-->
+					</script>
+				<hr>
+					
+					<script type="text/javascript">
+					<!--
+					var text = "The quick brown fox jumped over the lazy dog."
+					with (text) {
+					document.write (text);
+					document.write ('<p>The sentence is ' + length + ' characters.</p>');
+					document.write ('<p>In upper case it looks like this: ' + toUpperCase() + '</p>');
+					}
+					-->
+					</script>
+				<hr>
+				<!-- type= button,checkbox,color,date ,datetime ,datetime-local ,email ,file,hidden,image,month ,number ,password,radio,range ,reset,search,submit,tel,text,time ,url,week -->
+				<h3>#3</h3>
+				<!-- form copied and edited from test5a example-->
+				<form style="text-align:left;" action="MAILTO:idar@student.uiwtx.edu" method="post" enctype="text/plain"> 
+				<!-- The action attribute specifies where to send the form-data when a form is submitted. In HTML5, the action attribute is no longer required.-->
+					<fieldset> <!--The <fieldset> tag is used to group related elements in a form. The <fieldset> tag draws a box around the related elements.-->
+						<legend>Personal Info</legend>
+							First Name:<input type="text" name="fname" placeholder="First Name" ><br>  <!-- <fieldset name="text"> Specifies the name of the fieldset -->
+							Last Name:<input type="text" name="lname" placeholder="Last Name"><br>
+							Street Address:<input type="text" name="address" placeholder="Street Address"><br>
+							City:<input type="text" name="city" placeholder="City"><br>
+							Cell:<input type="text" name="Cell" placeholder="###-###-####"><br>
+							
+							State:<select name="State">
+								<option value="Arizona">Arizona</option>
+								<option value="California">California</option>
+								<option value="Florida">Florida</option>
+								<option value="New Mexico">New Mexico</option>
+								<option value="New York">New York</option>
+								<option value="Texas">Texas</option>
+								
+								</select><br>
+							
+							Age: <br>
+							<input type="radio" name="age" value="21 & under">21 & under<br>
+							<input type="radio" name="age" value="22 - 30">22 - 30<br>
+							<input type="radio" name="age" value="31 - 60">31 - 60<br>
+							<input type="radio" name="age" value="61 & over">61 & over<br>
+							
+							Are you employed (check one):<br>
+							<input type="checkbox" name="fulltime" value="Full Time">Full Time<br>
+							<input type="checkbox" name="parttime" value="Part Time">Part Time<br>
+							<input type="checkbox" name="unemployed" value="Unemployed">Unemployed<br>
+							
+							What kind of job would you like?<br>
+							<textarea rows="5" cols="60" placeholder="Enter your text here"></textarea><br>
+							
+							<input type="submit" value="Submit">
+					</fieldset>
+				</form>
+				<hr>
+				
+					<p style="color:red; font-size:1.6em; font-weight:bold;">test to see what vales fname & lname are:</p>
+					<script type="text/javascript">
+						<!--
+						var f = document.getElementById("fname").value;
+						var l = document.getElementById("lname").value;
+						document.write(fname + ' ' + lname)
+						//-->
+					</script>
+				<hr>
+
+				<!-- mailto form -->
+				<form style="text-align:left;" action="MAILTO:idar@student.uiwtx.edu" method="post" enctype="text/plain" style="width:600px; line-height:2">
+					<fieldset>
+						<legend>Wacko Form</legend>
+							First Name:<input type="text" name="fname" id="fname" size="30"><br>
+							Last Name:<input type="text" name="lname" id="lname" size="50"><br>
+							Street Address:<input type="text" name="streetAdd" id="streetAdd" size="75"><br>
+							City:<input type="text" name="city" id="city" size="50">&nbsp;&nbsp;
+							State:<select name="state" id="state">
+								<option value="WI">WI</option>
+								<option value="TX">TX</option>
+								<option value="CA">CA</option>
+								<option value="AL">AL</option>
+							</select>&nbsp;&nbsp;
+							Zip:<input type="text" name="zip" id="zip" size="10"><br>
+							Phone:<input type="text" name="phone" id="phone" size="20"><br>
+							Car Type:<select name="carType" id="carType">
+								<option value="sedan">Sedan</option>
+								<option value="wagon">StationWagon</option>
+								<option value="roadster">Roadster</option>
+								<option value="allTerrain">All Terrain</option>
+								<option value="pickup">Pick Up</option>
+							</select><br>
+							<input type="radio" name="color" value="red">Red&nbsp;&nbsp;
+							<input type="radio" name="color" value="green">Green&nbsp;&nbsp;
+							<input type="radio" name="color" value="blue">Blue&nbsp;&nbsp;
+							<input type="radio" name="color" value="yellow">Yellow<br>
+							<input type="checkbox" name="price" value="$10-15,000">$10-15,000&nbsp;&nbsp;
+							<input type="checkbox" name="price" value="$16-25,000">$16-25,000&nbsp;&nbsp;
+							<input type="checkbox" name="price" value="$26-35,000">$26-35,000&nbsp;&nbsp;
+							<input type="checkbox" name="price" value="$36,000+">$36,000<br>
+					</fieldset>
+					
+					Special Instructions<br>
+						<textarea rows="5" cols="71"></textarea><br>
+						<input type="submit" value="Submit"> <!--Where does the value of the form go when you hit submit? -->
+				</form>
+<hr>
+				<!-- Note: I found it best to use buttons with alerts -->
+				<button class="fix" onclick="escapechar()">click for concatenation, escape characters and alert</button> 
+				<!-- concatenation, escape characters and alert--> 
+				<script type="text/javascript"> 
+					 <!-- 
+						function escapechar(){
+							 var text = 'Reservations for two nights at Caesar\'s Palace have been made for\n'; 
+							 var text2 = 'A deposit isn\'t required.'; 
+							 var numres = 2; 
+							 var onDate = ('Jan 1, 2015 - Jan 3, 2015'); 
+							 alert(text + numres + ' on ' + onDate + '. ' + '\n' + text2);
+							 }
+					 //--> 
+				</script>
+<hr> <!-- ***************************** ???  ******************************************************* -->
+				
+				<form action="" method="post"> <!-- form also works without action , then what is the purpose of these? -->
+					<input type="text" name="msg" id="msg" placeholder="Enter a message to boys">
+					<input type="text" name="apple" id="apple" placeholder="# of apples there are">
+					<input type="text" name="boys" id="boys" placeholder="# of boys">
+				</form>
+
+				<button type="button" onclick="sayHello()"> Push Me </button>
+				
+				<p id="hellowMsg"> Push the "Push Me" button </p>
+								
+				<script type="text/javascript" src="js/sayHello.js"> </script>        <!-- uses an external javascript -->
+			
+				
+<hr> <!-- ************************************************************************************************** -->
+
+
+<hr>	<!-- ************************************************************************************************** -->
+
+		</div> <!-- close div="content" -->	
+		
+		<footer>
+			<nav>
+				<ul>
+					<li><a href="index.html" title="home">Home</a></li>
+					<li><a href="hw1.html" title="Homework 1">hw 1</a></li>
+					<li><a href="hw2.html" title="Homework 2">hw 2</a></li>
+					<li><a href="hw3.html" title="Homework 3">hw 3</a></li>
+					<li><a href="hw4.html" title="Homework 4">hw 4</a></li>
+					<li><a href="hw5.html" title="Homework 5">hw 5</a></li>
+					<li><a href="hw6.html" title="Homework 6">hw 6</a></li>
+					<li><a href="hw7.html" title="Homework 7">hw 7</a></li>
+					<li><a href="hw8.html" title="Homework 8">hw 8</a></li>
+					<li><a href="hw9JSON.html" title="Homework 9 JSON">Homework 9 JSON</a></li> 
+				</ul>
+			</nav>
+			Copyright Spring 2023 Prof Idar
+		</footer>
+		
+	<div> <!-- close div="container" -->
+	
+</body>
+</html>

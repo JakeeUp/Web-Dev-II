@@ -1,0 +1,146 @@
+<!DOCTYPE html>  
+<html lang="en">
+<head>
+	<meta charset="utf-8"> 
+	<meta name="descrition" content="CIS 3365.01 Sandbox">
+	<meta name="keywords" content="UIW, CIS 3365.01"> <!-- do caps matter?, what order is best for relevance on words?, is there a recommended amount of words? -->
+	<title>CIS 3365.01 Sandbox | Home</title> 
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/colors.css"> 
+	   <script type="text/javascript" src="js/ipad.js"></script>
+<!--	<link rel="stylesheet" type="text/css" href="css/print.css"> -->
+</head>
+
+<body>
+	<div id="container">
+		<header>
+			<img src="images/sandBox.png" height="45" alt="Sand Box logo" title="Sand Box logo"> <!-- header is 98px height, so image will be 90px with 4pxmargin tob & bottom, -->
+			<h1>CIS 3365.01 Sandbox</h1>
+			<nav>
+				<ul>
+					<li><a href="index.html" title="home">Home</a></li>
+					<li><a href="hw1.html" title="Homework 1">hw 1</a></li>
+					<li><a href="hw2.html" title="Homework 2">hw 2</a></li>
+					<li><a href="hw3.html" title="Homework 3">hw 3</a></li>
+					<li><a href="hw4.html" title="Homework 4">hw 4</a></li>
+					<li><a href="hw5.html" title="Homework 5">hw 5</a></li>
+					<li><a href="hw6.html" title="Homework 6">hw 6</a></li>
+					<li><a href="hw7.html" title="Homework 7">hw 7</a></li>
+					<li><a href="hw8.html" title="Homework 8">hw 8</a></li>
+					<li><a href="hw9JSON.html" title="Homework 9 JSON">Homework 9 JSON</a></li> 
+				</ul>
+			</nav>
+		</header>
+		
+		
+		<div id="content">
+					<h3> Homework #3 </h3>
+				
+					<hr>
+					<h4> JS Lesson 3: Conditionals </h4>
+					
+					<!--If Statements -->
+					<script type="text/javascript"> 
+						<!-- 
+						 var age = 21; 
+						 if (age < 21) { 
+							 document.write ('<p>You can not gamble in Las Vegas!</p>'); 
+							} 
+						//--> 
+					</script> 
+					
+					<!--If…else Statements -->
+					<script type="text/javascript"> 
+						 <!-- 
+						 var age = 21; 
+						 if (age >= 21) { 
+							 document.write ('<p>You can gamble in Las Vegas!</p>'); 
+							 }
+						else { 
+							 document.write ('<p>You can not gamble in Las Vegas!</p>'); 
+							 } 
+						 //--> 
+					</script> 
+					
+					<!--If…else…if Statements -->
+					<script type="text/javascript"> 
+						 <!-- 
+						 var age = 21; 
+						 if (age >= 21) { 
+							 document.write ('<p>You can gamble in Las Vegas!</p>'); 
+							 } 
+						else if (age == 18) { 
+							 document.write ('<p>You can not gamble in Las Vegas at age 18! You have to be 21 years old.</p>'); 
+							 } 
+						else if (age < 18) { 
+							 document.write ('<p>You are too young and can not gamble in Las Vegas! Go play video games.</p>'); 
+							 } 
+						 else if (age < 21 && age > 18) { 
+							 document.write ('<p>You can not gamble in Las Vegas! You have to be 21 years old. Wait a couple of year and try again.</p>'); 
+							 } 
+						 //--> 
+					</script> 
+					
+					<!--switch Statements-->
+					<script type="text/javascript"> 
+						 <!-- 
+						 var temperature = '50 degrees Fahrenheit'; 
+						 document.write ('<p>Water will not freeze at ' + temperature); 
+						 switch (temperature) { 
+							case '50 degrees Fahrenheit': document.write ('</p> still not freezing...'); 
+							break; 
+							case '35 degrees Fahrenheit': document.write ('Colder but still not freezing.'); 
+							case '34 degrees Fahrenheit': document.write ('Almost cold enough for water to freeze.</p>'); 
+							break; 
+							case '33 degrees Fahrenheit': document.write ('Water will freeze at </p>' + temperaure + ' degrees Fahrenheit.');
+							break; 
+							} 
+						 document.write ('<p>Ordinarily the freezing point of water is 0 degrees C or 32 degrees F. The temperature may be lower if supercooling occurs or if there are impurities present in the water which could cause freezing point depression to occur. </p>'); 
+						 //--> 
+					</script> 
+
+					
+					<hr>
+					
+					<p id="screen">
+						<img class="ipad" src="images/ipad.gif" alt="ipad" title="ipad">    <!--shows ipad horizontal -->
+						<img class="henry" src="images/Henry.gif" alt="Henry" title="animated 134kb gif file of Henry Idar"> <!--  Shows picture of henry -->
+						<button class="homebutton" type="button" onclick="home()"> <img src="images/homebutton.gif"> </button> <!-- displays ipad homebutton on horizontal ipad -->  
+					</p>
+
+					<hr>	
+					
+					<a id="sprite-ipad" href="http://drphonez.com/ipad-2-digitizer-touch-screen-repair-replacement/" target="_blank" alt="fix ipad"> </a> 
+					
+					<hr>
+					
+					<p id="ipad">
+						<img id="brokenipad">
+					</p>
+					<button class="fix" type="button" onclick="fixipad()">fix ipad</button>
+					<button class="fix" type="button" onclick="breakipad()">break ipad</button>
+					
+		</div> <!-- close div="content" -->	
+		
+		<footer>
+			<nav>
+				<ul>
+					<li><a href="index.html" title="home">Home</a></li>
+					<li><a href="hw1.html" title="Homework 1">hw 1</a></li>
+					<li><a href="hw2.html" title="Homework 2">hw 2</a></li>
+					<li><a href="hw3.html" title="Homework 3">hw 3</a></li>
+					<li><a href="hw4.html" title="Homework 4">hw 4</a></li>
+					<li><a href="hw5.html" title="Homework 5">hw 5</a></li>
+					<li><a href="hw6.html" title="Homework 6">hw 6</a></li>
+					<li><a href="hw7.html" title="Homework 7">hw 7</a></li>
+					<li><a href="hw8.html" title="Homework 8">hw 8</a></li>
+					<li><a href="hw9JSON.html" title="Homework 9 JSON">Homework 9 JSON</a></li> 
+				</ul>
+			</nav>
+			Copyright Spring 2023 Prof Idar
+		</footer>
+		
+	<div> <!-- close div="container" -->
+	
+</body>
+</html>

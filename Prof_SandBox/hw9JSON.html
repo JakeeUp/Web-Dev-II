@@ -1,0 +1,126 @@
+<!DOCTYPE html>  
+<html lang="en">
+<head>
+	<meta charset="utf-8"> 
+	<meta name="descrition" content="CIS 3365.01 Sandbox">
+	<meta name="keywords" content="Web3, UIW, CIS 3365.01"> <!-- do caps matter?, what order is best for relevance on words?, is there a recommended amount of words? -->
+	<title>CIS 3365.01 Sandbox | Home</title>
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/colors.css">
+	 <script type="text/javascript" src="js/json-minified.js"></script>
+</head>
+
+<body>
+	<div id="container">
+		<header>
+			<img src="images/sandBox.png" height="45" alt="Sand Box logo" title="Sand Box logo"> <!-- header is 98px height, so image will be 90px with 4pxmargin tob & bottom, -->
+			<h1>CIS 3365.01 Sandbox</h1>
+			<nav>
+				<ul>
+					<li><a href="index.html" title="home">Home</a></li>
+					<li><a href="hw1.html" title="Homework 1">hw 1</a></li>
+					<li><a href="hw2.html" title="Homework 2">hw 2</a></li>
+					<li><a href="hw3.html" title="Homework 3">hw 3</a></li>
+					<li><a href="hw4.html" title="Homework 4">hw 4</a></li>
+					<li><a href="hw5.html" title="Homework 5">hw 5</a></li>
+					<li><a href="hw6.html" title="Homework 6">hw 6</a></li>
+					<li><a href="hw7.html" title="Homework 7">hw 7</a></li>
+					<li><a href="hw8.html" title="Homework 8">hw 8</a></li>
+					<li><a href="hw9JSON.html" title="Homework 9 JSON">hw 9 JSON</a></li> 
+					<li><a href="DragAndDrop.html" title="Drag and Drop">Drag and Drop</a></li>
+				</ul>
+			</nav>
+		</header>
+		
+		
+		<div id="content">
+				<h3> Homework 9 JSON </h3>
+				<hr>				
+					<p id="displayInfo">ERROR!!! id="displayInfo" did not return a value.</p>
+				
+				<script type="text/javascript">
+				<!-- JSON uses property pictures to set value of images in the array actor
+					var actor = [
+						{ "firstName" : "Johnny" , "lastName" : "Depp" , "picture" : "<img src='images/JDepp.jpg' width='100'>"}, //actor[0] 
+						{ "firstName" : "Liam" , "lastName" : "Neeson", "picture" : "<img src='images/LNeeson.jpg' width='100'>" }, //actor[1]
+						{ "firstName" : "Samuel" , "lastName" : "Jackson", "picture" : "<img src='images/SJackson.jpg' width='100'>" }, //actor[2]
+						];
+						
+						
+					document.getElementById("displayInfo").innerHTML=actor[0].firstName + " " + actor[0].lastName;
+					document.write(actor[0].firstName + ' ' + actor[0].lastName + '<br>');
+					document.write(actor.picture + '<br>');				
+					actor[0].firstName="Jo";
+					document.write(actor[0].firstName + ' ' + actor[0].lastName + '<br>');
+
+					var x=actor[2].firstName;
+					document.write(x + '<br>');
+					
+					
+					actor[0].firstName="John";
+					document.write(actor[0].firstName + ' ' + actor[0].lastName + '<br>');
+					
+					document.write(actor[0].lastName + ' ' + actor[1].lastName + ' ' + actor[2].lastName + '<br><hr>'); // forget one little plus sign and EVERYTHING goes crazy!!!
+					
+					function actorsPicture(){
+						var v=actor.length; //uses a for loop to display the array actors that uses JSON
+						for (i=0; i<v; i++){
+						
+						document.write(actor[i].picture + '<br>' + actor[i].firstName + ' ' + actor[i].lastName + '<br><hr>');
+						//document.getElementById("pictureOfActor").innerHTML=(actor[i].picture + '<br>' + actor[i].firstName + ' ' + actor[i].lastName + '<br><hr>');
+						// I could not get the entire array to print  in innerHTML, I couldn't figure out how to use appendchild()..
+						}
+					}
+				-->
+				</script>
+				<p id="pictureOfActor">Click button to see pictures of actors. </p>
+				<button type="button" onclick="actorsPicture()">click</button>
+				
+				
+		</div> <!-- close div="content" -->	
+		
+		<footer>
+			<nav>
+				<ul>
+					<li><a href="index.html" title="home">Home</a></li>
+					<li><a href="hw1.html" title="Homework 1">hw 1</a></li>
+					<li><a href="hw2.html" title="Homework 2">hw 2</a></li>
+					<li><a href="hw3.html" title="Homework 3">hw 3</a></li>
+					<li><a href="hw4.html" title="Homework 4">hw 4</a></li>
+					<li><a href="hw5.html" title="Homework 5">hw 5</a></li>
+					<li><a href="hw6.html" title="Homework 6">hw 6</a></li>
+					<li><a href="hw7.html" title="Homework 7">hw 7</a></li>
+					<li><a href="hw8.html" title="Homework 8">hw 8</a></li>
+					<li><a href="hw9JSON.html" title="Homework 9 JSON">hw 9 JSON</a></li>
+					<li><a href="DragAndDrop.html" title="Drag and Drop">Drag and Drop</a></li>
+				</ul>
+			</nav>
+			Copyright Spring 2023 Prof Idar
+		</footer>
+		
+	<div> <!-- close div="container" -->
+	
+</body>
+</html>
+
+<!-- example from : http://www.w3schools.com/json/json_intro.asp
+<h2>JSON Object Creation in JavaScript</h2>
+<p>
+Name: <span id="jname"></span><br /> 
+Age: <span id="jage"></span><br /> 
+Address: <span id="jstreet"></span><br /> 
+Phone: <span id="jphone"></span><br /> 
+</p>
+
+<script>
+var JSONObject= {
+"name":"John Johnson",
+"street":"Oslo West 555", 
+"age":33,
+"phone":"555 1234567"};
+document.getElementById("jname").innerHTML=JSONObject.name;
+document.getElementById("jage").innerHTML=JSONObject.age; 
+document.getElementById("jstreet").innerHTML=JSONObject.street;
+document.getElementById("jphone").innerHTML=JSONObject.phone; 
+</script>
+-->

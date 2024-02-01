@@ -1,0 +1,277 @@
+<!DOCTYPE html>  
+<html lang="en">
+<head>
+	<meta charset="utf-8"> 
+	<meta name="descrition" content="CIS 3365.01 Sandbox">
+	<meta name="keywords" content=" UIW, CIS 3365.01"> <!-- do caps matter?, what order is best for relevance on words?, is there a recommended amount of words? -->
+	<title>CIS 3365.01 Sandbox | Home</title>
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/colors.css">
+</head>
+
+<body>
+	<div id="container">
+		<header>
+			<img src="images/sandBox.png" height="45" alt="Sand Box logo" title="Sand Box logo"> <!-- header is 98px height, so image will be 90px with 4pxmargin tob & bottom, -->
+			<h1>CIS 3365.01 Sandbox</h1>
+			<nav>
+				<ul>
+					<li><a href="index.html" title="home">Home</a></li>
+					<li><a href="hw1.html" title="Homework 1">hw 1</a></li>
+					<li><a href="hw2.html" title="Homework 2">hw 2</a></li>
+					<li><a href="hw3.html" title="Homework 3">hw 3</a></li>
+					<li><a href="hw4.html" title="Homework 4">hw 4</a></li>
+					<li><a href="hw5.html" title="Homework 5">hw 5</a></li>
+					<li><a href="hw6.html" title="Homework 6">hw 6</a></li>
+					<li><a href="hw7.html" title="Homework 7">hw 7</a></li>
+					<li><a href="hw8.html" title="Homework 8">hw 8</a></li>
+					<li><a href="hw9JSON.html" title="Homework 9 JSON">Homework 9 JSON</a></li> 
+				</ul>
+			</nav>
+		</header>
+		
+		
+		<div id="content">
+				<h3> This is Assignment #8 Arrays</h3>
+				<hr>
+<script type="text/javascript">
+<!--
+//the array
+var spices = new Array();
+spices[0]= "cinnamon";
+spices[1]= "pepper";
+spices[2]= "paprika";
+spices[3]= "salt";
+spices[4]= "allspice";
+spices[5]= "nutmeg";
+//sets the variable and sets up increment
+for (i=0; i<spices.length; i++){
+//returns the array
+document.write(spices[i] + "<br>");
+}
+//-->
+</script>
+<hr>
+
+<!-- JS that uses input from a form and an array -->
+<form>
+<input type="text" id="guess" size="30" placeholder="What color am I thinking of?">
+<button id="submit" onclick="guessWhatColor()" value="Submit">Guess</button>
+</form>
+<script type="text/javascript">
+<!--
+//This is the function that initializes the script  *****I don't understand this function******
+window.onload = init;
+function init() {
+var button = document.getElementById("submit");
+button.onclick = guessWhatColor();
+}
+//this function compares the guess & responds. it is an alternate version of guessGame.js
+function guessWhatColor() {
+var textInput = document.getElementById("guess");
+var guess = textInput.value;
+var answer = null;
+//array of possible answers
+var answers = ["red", "green", "blue", "pink", "yellow", "purple", "white", "black", "orange", "grey", "brown"];
+//use of library of functions
+//http://www.w3schools.com/js/js_libraries.asp
+var index = Math.floor(Math.random() * answers.length); // answers.length = 11 items in array
+//conditional
+if (guess == answers[index]) {
+answer = "You're right! I was thinking of " + answers[index];
+} else {
+answer = "Sorry, I was thinking of " + answers[index];
+}
+//browser function
+alert(answer);
+}
+//-->
+</script>
+<hr>
+<!-- an associative array -->
+<script type="text/javascript">
+<!--
+//creates the associative array     
+jbmix = { "cinnamon": "10","green apple": "12","sour cherry": "18","coconut": "4","root beer": "16","sour lemon": "10" }
+//sets up output
+document.write('<p class="exampstyle">In my favorite mix of 70 Jelly Belly jelly beans, there are <br>');
+//outputs the array where jb is the key value
+for (jb in jbmix){
+document.write('<span style="margin-left:20px;">' + jbmix[jb] + " " + jb + '</span><br>');
+}
+document.write('</p>');
+//-->
+</script>
+<hr>
+<!-- multi-dimensional array -->
+<form id="fidoFun">
+<button onclick="fidoFun()">What does Sam love?</button>
+</form>
+<script type="text/javascript">
+<!--
+//initializes on load using the function as a value
+window.onload = init;
+function init() {
+button.onclick = fidoFun;
+}
+//create an object which is an associative array
+var fido = {name: "Sam",weight: "27",breed: "Cairn Terrier",loves: ["doing tricks, ", "sleeping, ", "chasing cats, ", "singing."]}
+function fidoFun() {
+//fido is the object, loves is the property name
+var likes = fido.loves;
+var likesString = (fido.name + " likes");
+//var i is declared when used
+for (var i=1; i <= likes.length; i++) {
+//equivalent to likesString = likesString + " " + likes[i]
+likesString += " " + likes[i];
+ alert(i + ") " + likesString + " \n likes.length = " + i + " of " + likes.length);
+}
+//alert(likesString);
+
+}
+//-->
+</script>
+<hr>
+
+				<p style="text-align:left; font-weight:bold;"> Homework<br>1. Write your own JS's for each of the examples above. (4)<br>2. Ensure your JS's are well documented with comments.<br>3. Complete the Challenge (as you are able).<br>4. Publish your work on your website.</p>
+				<hr><hr>
+				<hr><hr>
+				
+				<script type="text/JavaScript">
+				<!--
+					// Assign path of images to be preloaded to
+					// array, one image per index
+					var imagenames = [];
+					imagenames[0] = "images/JDepp.jpg";
+					imagenames[1] = "images/LNeeson.jpg";
+					imagenames[2] = "images/SJackson.jpg";
+					
+					// Create new image object for each image
+					// and then assign a path to the src, preloading
+					// the actual image
+					function preload(imagenames) {
+						var images = [];
+						for (var i=0; i < imagenames.length; i++) {
+							images[i] = new Image();
+							images[i].src = imagenames[i];
+						}
+					}
+					// Run script, preloading images, before document loads
+					// (alternately, place call in an onLoad in body tag to
+					// preload images after document loads
+					preload(imagenames);
+					//-->
+					for (i=0; i<imagenames.length; i++){
+						//returns the array
+						document.write(imagenames[i] + "<br>");
+					}
+					</script>
+
+					
+					<form name="actorsname" method="post" style="text-align:left;">
+						<fieldset>
+							<legend> Actors </legend>
+							Add an actor's name:<input type="text" name="Aname" id="Actorname" placeholder="Actor Name" ><br>  <!-- <fieldset name="text"> Specifies the name of the fieldset -->
+							<br>
+							<button type="button" onclick="updateActorArray()">Submit</button>							
+						</fieldset>
+					</form>
+					
+					
+					
+					<script type="text/JavaScript">
+					<!--
+					
+						var actors = ["Johnny Depp", "Liam Neeson", "Samuel L. Jackson"];
+						document.write('<b>Display updated array of actors here:</b>');
+						
+						function updateActorArray()
+						{
+						var A=document.getElementById("Actorname").value; //gets the value from the input
+						actors.push(' ' + A) //uses the push method to add another item to the array
+						document.getElementById("displayActors").innerHTML=actors;
+						
+						}
+					//-->
+					</script>
+					
+					<p id="displayActors">
+						<script type="text/JavaScript">
+						<!--
+						
+							var actors = ["Johnny Depp", "Liam Neeson", "Samuel L. Jackson"];
+							document.write(actors);
+										var stars = new Array();
+										stars[0] = "Eridanus";
+										stars[1] = "Cassiopeia";
+										stars[2] = "Scorpius";
+										stars[3] = "Cancer";
+										stars[4] = "Leo";
+										stars[5] = "Taurus";
+										stars[6] = "Andromeda";
+										stars[7] = "Virgo";
+										
+
+										// Declare an associative array element:
+										stars["sun"] = "ball of fire";
+u
+										// Retrieve the value using dot notation:
+										document.write(stars.sun);
+										document.write(stars);
+										document.write(stars[7]);
+						//-->
+						</script>
+					</p>
+					<hr>
+					<p>
+						<script type="text/JavaScript">
+						<!--						
+							var stars = new Array();
+							stars[0] = "Eridanus";
+							stars[1] = "Cassiopeia";
+							stars[2] = "Scorpius";
+							stars[3] = "Cancer";
+							stars[4] = "Leo";
+							stars[5] = "Taurus";
+							stars[6] = "Andromeda";
+							stars[7] = "Virgo";
+							
+
+							// Declare an associative array element:
+							stars["sun"] = "ball of fire";
+
+							// Retrieve the value using dot notation:
+							document.write(stars.sun + ' <b>is stars.sun</b><br>');
+							document.write(stars + ' <b>is stars</b><br>');
+							document.write(stars[7] + ' <b>is stars[7]</b><br>');
+							document.write(stars[0] + ' <b>is stars[0]</b><br>');
+						//-->
+						</script>
+					</p>
+					<hr><hr>
+										
+				
+		</div> <!-- close div="content" -->	
+		
+		<footer>
+			<nav>
+				<ul>
+					<li><a href="index.html" title="home">Home</a></li>
+					<li><a href="hw1.html" title="Homework 1">hw 1</a></li>
+					<li><a href="hw2.html" title="Homework 2">hw 2</a></li>
+					<li><a href="hw3.html" title="Homework 3">hw 3</a></li>
+					<li><a href="hw4.html" title="Homework 4">hw 4</a></li>
+					<li><a href="hw5.html" title="Homework 5">hw 5</a></li>
+					<li><a href="hw6.html" title="Homework 6">hw 6</a></li>
+					<li><a href="hw7.html" title="Homework 7">hw 7</a></li>
+					<li><a href="hw8.html" title="Homework 8">hw 8</a></li>
+					<li><a href="hw9JSON.html" title="Homework 9 JSON">Homework 9 JSON</a></li> 
+				</ul>
+			</nav>
+			Copyright Spring 2023 Prof Idar
+		</footer>
+		
+	<div> <!-- close div="container" -->
+	
+</body>
+</html>

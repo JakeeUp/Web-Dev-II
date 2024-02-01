@@ -1,0 +1,286 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>test 5</title>
+</head>
+<body>
+<script type="text/javascript">
+	<!--
+	//https://www.w3schools.com/
+	//-->
+</script>
+
+<form action="" method="post" id="appleMsg" style="width:800px; line-height:2;">
+	How many apples are there?: <input type="text" name="numberApples" id="numberApples">
+	How many boys are there?: <input type="text" name="numberBoys" id="numberBoys">		
+</form> 
+<button onclick="appleShare()">Split the Apples</button>
+
+<div id="msgForBoys"> </div>
+
+<script type="text/javascript">
+	<!--
+		function appleShare(){
+			var a = document.getElementById("numberApples").value;
+			var b = document.getElementById("numberBoys").value;
+			document.getElementById("msgForBoys").innerHTML = ('<p>There are ' + a + ' apples and ' + b + ' boys.<br>To share the apples equally, each boy should get ' + a/b + ' apples.</p>');
+		}
+	//-->
+</script>
+
+<hr>
+
+<!-- function employing an if statement -->
+<form action="" method="post"  id="lifeTest" onReset="clearHTML1()" style="width:400px; line-height:2;">
+Enter  your age:<input type="text" name="ageIn" id="ageIn"><br>
+<button type="reset" value="reset">Reset</button>
+</form>
+
+<button onclick="alive()">Enter</button>
+
+<div id="ageTest1"> 
+
+</div>
+
+<script type="text/javascript">
+	<!--
+		function alive(){
+			var ageNumb = document.getElementById("ageIn").value;
+			if (ageNumb > 0) {
+				document.getElementById("ageTest1").innerHTML = ('<p>Life detected!</p>');
+			}
+		}
+	//-->
+</script>
+<script type="text/javascript">
+	<!--
+		function clearHTML1(){
+			document.getElementById("ageTest1").innerHTML = ('<p> </p>');
+		}
+	//-->
+</script>
+
+<hr>
+
+<!-- function employing an if...else statement -->
+<form action="" method="post"  id="age" onReset="clearHTML2()" style="width:400px; line-height:2;">
+Enter  your age:<input type="text" name="inputAge" id="inputAge"><br>
+<button type="reset" value="reset">Reset</button>
+</form>
+
+<button onclick="checkAge()">Enter</button>
+
+<div id="ageTest2">
+
+</div>
+
+<script type="text/javascript">
+	<!--
+		function checkAge(){
+			var age = document.getElementById("inputAge").value;	
+			if (age < 18){
+				document.getElementById("ageTest2").innerHTML = ('<p>Your age is ' + age + '. Still just a baby. Awwww!</p>');
+			} else if (age > 60) {
+				document.getElementById("ageTest2").innerHTML = ('<p>Your age is ' + age + '. Time to retire, good and faithful servant!</p>');
+			} else {
+				document.getElementById("ageTest2").innerHTML = ('<p>Your age is ' + age + '. Old enough to vote and serve your country!</p>');	
+			}
+		}
+	//-->
+</script>
+<script type="text/javascript">
+	<!--
+		function clearHTML2(){
+			document.getElementById("ageTest2").innerHTML = ('<p> </p>');
+		}
+	//-->
+</script>
+
+<hr>
+
+<!-- if...else with two parameters -->
+
+<form>
+	<input type="text" size="20" id="dogName" placeholder="Dog's Name">
+	<input type="number" size="12" id="dogWeight" placeholder="Dog's Weight">
+	<input type="button" id="submit" value="Submit">
+</form>
+
+<script type="text/javascript">
+	<!--
+		//This is a function that initializes the script	
+		window.onload = init;
+		function init()	{
+			var button = document.getElementById("submit");
+			button.onclick = bark;
+		}
+		
+		//a simple function with two parameters 
+		function bark(dogName, dogWeight) {
+		//these lines go get the arguments from text input fields
+		var textInput = document.getElementById("dogName");
+		var dogName = textInput.value;
+		var textInput1 = document.getElementById("dogWeight");
+		var dogWeight = textInput1.value;
+		
+		//conditional - the body of the function where the real work is done!
+		if (dogWeight <= 10) {
+			answer = (dogName + " says Yip Yip");
+		} else if (dogWeight >30){
+			answer = (dogName + " says Woof Woof");
+		} else {
+			answer = (dogName + " says Bark Bark");
+		}
+		//browser function
+		alert(answer);
+		}
+	//-->
+</script> 
+
+<hr>
+<!-- look up library functions ----->
+<!-- function with switch -->
+<form action="" method="post"  id="getTemp" onReset="clearHTML3()" style="width:400px; line-height:2;">
+Enter  the current temperature:<br>
+<input type="radio" name="inputTemp"  onclick="checkTemp('1')">less than 70 degrees<br>
+<input type="radio" name="inputTemp"  onclick="checkTemp('2')">71 to 79 degrees<br>
+<input type="radio" name="inputTemp"  onclick="checkTemp('3')">80 to 90 degrees<br>
+<input type="radio" name="inputTemp"  onclick="checkTemp('4')">90<sup>+</sup> degrees<br>
+<button type="reset" value="reset">Reset</button>
+</form>
+
+<div id="tempTest">
+
+</div>
+
+<script type="text/javascript">
+	<!--
+		
+		function checkTemp(temp) {
+			//var temp = document.getElementByName("inputTemp").value;
+			switch(temp){ 
+				case '1': document.getElementById("tempTest").innerHTML = ("<p>Wear something warm.</p>");
+				break;
+				case '2': document.getElementById("tempTest").innerHTML = ("<p>Ah. Just right. No sweating today.</p>");
+				break;
+				case '3': document.getElementById("tempTest").innerHTML = ("<p>Leave your sweater at home.</p>");
+				break;
+				case '4': document.getElementById("tempTest").innerHTML = ("Today you are the sweater.");
+			}
+		}
+	//-->
+</script>
+
+<script type="text/javascript">
+	<!--
+		function clearHTML3(){
+			document.getElementById("tempTest").innerHTML = ('<p> </p>');
+		}
+	//-->
+</script>
+
+<hr>
+
+<!-- function with a while loop and a nested function  -->
+<form action="" method="post"  id="pop" onReset="clearHTML4()" style="width:400px; line-height:2;">
+Enter  the number of times you want to repeat the phrase<br>"Pop, Pop, Pop, Pop, Pop":<br>
+<input type="text" name="inputPop" id="inputPop"><br>
+<button type="reset" value="reset">Reset</button>
+</form>
+
+<button onclick="checkPop()">Enter</button>
+
+<div>
+	<ul id="popCount" style="list-style-type:none;">
+	
+	</ul>
+</div>
+<script type="text/javascript">
+	<!--
+		function checkPop() {
+			var count = document.getElementById("inputPop").value;
+			var i = 0;
+			while (i < count) {			
+				makePop();
+				i++;
+			}			
+		
+			function makePop() {
+				var li = document.createElement("li");
+				var newContent = document.createTextNode("Pop Pop Pop Pop Pop");
+				li.appendChild(newContent);
+				
+				var element = document.getElementById("popCount");
+				element.appendChild(li);
+			}
+		}
+//-->
+</script>
+<script type="text/javascript">
+	<!--
+		function clearHTML4(){
+			document.getElementById("popCount").innerHTML = ('<p> </p>');
+		}
+	//-->
+</script>
+
+<hr>
+
+<!-- function with a for loop -->
+<form action="" method="post"  id="getNumb" onReset="clearHTML5()" style="width:600px; line-height:2;">
+Enter a whole number between 1 and 10 to see the computer count up to 1000 in increments of that number:<br>
+<input type="number" name="inputIncrement" id="inputIncrement"><br>
+<button type="reset" value="reset">Reset</button>
+</form>
+
+<button onclick="countUp()">Enter</button>
+
+<div id="addNumbs" style="width:600px">
+	
+</div>
+
+<script type="text/javascript">
+	<!--
+			function countUp(){
+				//get input value
+				var inc = document.getElementById("inputIncrement").value;
+				//parse input value as an integer. this is the starting value
+				var increment = parseInt(inc);
+				//error correction for those who input zero
+				if (increment<=0){
+					alert('You have entered a number less than or equal to zero.\nPlease push \"Reset\" & enter a whole number between 1 and 10.');
+				} else if (increment>10){
+					alert('You have entered a number greater than ten.\nPlease push \"Reset\" & enter a whole number between 1 and 10.');
+				} else {
+					//starts at zero but will not increment if k is greater than 1000, however, the final k may be over 1000.
+					for (k=0; k < 1000; ) {
+						//nested function does the work
+						function makeCount() {
+							//does the math
+							k+=increment;
+							//this adds the new number to the element with the id "addNumbs"
+							var addByN = document.getElementById('addNumbs');
+							addByN.insertAdjacentHTML('beforeend', (' ' + k + ' '));
+						}
+					//calls the function again
+					makeCount();	
+					}
+				}
+			}
+	//-->
+</script>
+<script type="text/javascript">
+	<!--
+		function clearHTML5(){
+			document.getElementById("addNumbs").innerHTML = ('<p> </p>');
+		}
+	//-->
+</script>
+
+<hr>
+
+
+</body>
+</html>
